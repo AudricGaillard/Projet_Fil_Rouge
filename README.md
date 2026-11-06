@@ -79,6 +79,9 @@ Résultat : Nous n'avons pas à rechercher et à écrire de manière brut les co
 
 https://nominatim.org/release-docs/develop/api/Search/
 
+# Résultat de l'interface graphique :
+<img width="1841" height="990" alt="Capture d’écran du 2026-11-06 22-59-17" src="https://github.com/user-attachments/assets/611ad63e-a669-4c85-be3d-cd9843668c73" />
+
 # Axes d'améliorations
 - Mise à jour en temps réel des relevés météos : Fonctionnalités UPDATE non-implémentés dans le gestionnaire de la base de données, ce qui fais que les données peuvent être obselètes
 
