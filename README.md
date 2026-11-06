@@ -69,4 +69,20 @@ La documentation de l'API de ce projet se trouve sur :  http://127.0.0.1:8000/do
 https://open-meteo.com/
 
 
-- Nominatim : API utilisant OpenStreetMap pour récupérer les coordonnées précise d'une ville
+- Nominatim : API utilisant OpenStreetMap pour récupérer les coordonnées précise d'une ville sur base de certains critères passés en paramètre. Dans ce projet, cet API s'avère pratique dans l'insertion d'une nouvelle ville dans la base :
+
+    - L'utilisateur entre un nom de ville dans le formulaire (voir les pages Streamlit)
+    - FastAPI fait une requête vers cet API avec le nom entré par l'utilisateur en paramètre pour récupérer la 1ère occurence de la ville concernée
+    - On peut ensuite récupérer les coordonnées depuis les résultats de la requête pour avoir les relevés météo avec Open Meteo
+
+Résultat : Nous n'avons pas à rechercher et à écrire de manière brut les coordonnées d'une ville à insérer dans la base, seul le nom suffit pour avoir ces résultats
+
+https://nominatim.org/release-docs/develop/api/Search/
+
+# Axes d'améliorations
+- Mise à jour en temps réel des relevés météos : Fonctionnalités UPDATE non-implémentés dans le gestionnaire de la base de données, ce qui fais que les données peuvent être obselètes
+
+- Dashboard avec Grafana (ou autre) pour suivre en temps réel le fonctionnement de l'API
+
+- Quelques améliorations sur l'architecture du projet.
+
